@@ -1,0 +1,40 @@
+<!-- views/users.ejs -->
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <% include ./partials/head %>
+  </head>
+  <body class="container">
+
+  <header>
+   <% include ./partials/nav %> 
+  </header>
+
+  <div class="container">
+     <div class="row">
+        <div class="col-md-offset-1 col-md-8">
+          <div class="table-responsive">
+               <table class="table">
+                    <thead>
+                            <tr>
+                              <th scope="col">Subject</th>
+                              <th scope="col">Text</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                        <% for(var i=0; i<posts.length; i++) {%>
+                            <tr>
+                              <td><%= posts[i].subject %></td>
+                              <td><%= posts[i].text %></td>
+                            </tr>
+                        <% } %> 
+                          </tbody>
+               </table>
+            </div>
+          </div>
+       </div>  
+
+    </div>
+ </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <% include ./partials/head %>
+ </head>
+ <body class="container">
+
+ <header>
+   <% include ./partials/nav %> 
+ </header>
+
+ <div class="container">
+   <div class="row">
+    <div class="col-md-offset-2 col-md-6">
+       <% if(error) { %>
+        <div style="color:red"> <%= error %></div>
+       <% } %>
+       <% if(success) { %>
+        <div style="color:green"> <%= success %></div>
+       <% } %>
+            <div class="panel panel-default">
+                <div class="panel-heading">Add a new Post</div>
+                <div class="panel-body">
+                        
+                    <form action="/new" method="post">
+            
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <input type="text" name="subject" class="form-control" required>
+                        </div>
+            
+                        <div class="form-group">
+                            <label>Text</label>
+                            <input type="textarea" name="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success btn-lg">Post</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+         </div>
+      </div>  
+     </div>
+
+   </body>  
+   </html>
